@@ -2,5 +2,5 @@
 
 public class Student(string firstName, string lastName) : User(firstName, lastName)
 {
-    
+    public override int MaxRentals => 2;
 }

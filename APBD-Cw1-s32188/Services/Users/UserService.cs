@@ -5,7 +5,7 @@ namespace APBD_Cw1_s32188.Services.Users;
 
 public class UserService : IUserService
 {
-    private readonly List<User> _users = [];
+    private readonly List<User> _users = new List<User>();
     
     public void AddUser(User user)
     {

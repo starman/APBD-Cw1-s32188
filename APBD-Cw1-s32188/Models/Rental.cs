@@ -5,9 +5,11 @@ public class Rental(User user, Equipment equipment, DateTime rentalDate, int day
     private static int _nextId = 1;
     
     public int Id { get; set; } = _nextId++;
-    public User user { get; set; } = user;
-    public Equipment equipment { get; set; } = equipment;
+    public User User { get; set; } = user;
+    public Equipment Equipment { get; set; } = equipment;
     public DateTime RentalDate { get; set; } = rentalDate;
     public int Days { get; set; } = days;
     public DateTime? ReturnDate { get; set; } = null;
+
+    public decimal Penalty { get; set; } = 0;
 }

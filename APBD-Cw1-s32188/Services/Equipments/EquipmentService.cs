@@ -6,7 +6,7 @@ namespace APBD_Cw1_s32188.Services.Equipments;
 
 public class EquipmentService : IEquipmentService
 {
-    private readonly List<Equipment> _equipments = [];
+    private readonly List<Equipment> _equipments = new List<Equipment>();
     
     public void AddEquipment(Equipment equipment)
     {

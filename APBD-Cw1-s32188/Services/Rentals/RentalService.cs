@@ -13,7 +13,7 @@ public class RentalService(IUserService userService, IEquipmentService equipment
     private readonly IEquipmentService _equipmentService = equipmentService;
     private readonly List<Rental> _rentals = new();
 
-    public void RentEquipment(int equipmentId, int userId, int days)
+    public Rental RentEquipment(int equipmentId, int userId, int days, DateTime? rentalDate = null)
     {
         var user = _userService.GetUserById(userId);
         var equipment = _equipmentService.GetEquipmentById(equipmentId);
@@ -25,10 +25,12 @@ public class RentalService(IUserService userService, IEquipmentService equipment
         if (activeRentals >= user.MaxRentals)
             throw new RentalLimitExceededException(userId);
         
-        var rental = new Rental(user, equipment, DateTime.Now, days);
+        var rental = new Rental(user, equipment, rentalDate ?? DateTime.Now, days);
         
         _equipmentService.SetUnavailable(equipmentId);
         _rentals.Add(rental);
+        
+        return rental;
     }
 
     public void ReturnEquipment(int rentalId)

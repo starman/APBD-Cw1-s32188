@@ -4,7 +4,7 @@ namespace APBD_Cw1_s32188.Services.Rentals;
 
 public interface IRentalService
 {
-    void RentEquipment(int equipmentId, int userId, int days);
+    Rental RentEquipment(int equipmentId, int userId, int days, DateTime? rentDate = null);
     void ReturnEquipment(int rentalId);
     
     List<Rental> GetActiveUserRentals(int userId);

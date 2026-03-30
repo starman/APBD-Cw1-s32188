@@ -4,6 +4,31 @@
 Projekt aplikacji konsolowej do zarządzania wypożyczaniem sprzętu uczelnianego.
 System pozwala na dodawanie sprzętu i użytkowników, wypożyczanie i zwroty sprzętu, naliczanie kar za opóźnienia oraz generowanie raportów.
 
+## Uruchomienie
+
+### Wymagania
+- .NET 10.0 lub nowszy zainstalowany na komputerze
+
+### Kroki uruchomienia
+1. Sklonuj repozytorium
+```bash
+  git clone https://github.com/starman/APBD-Cw1-s32188.git
+```
+
+2. Przejdź do folderu repozytorium:
+```bash
+  cd APBD-Cw1-s32188
+```
+
+3. Przejdź do folderu zawierającego plik `.csproj`:
+```bash
+  cd APBD-Cw1-s32188
+```
+
+4. Uruchom aplikację:
+```bash
+  dotnet run
+```
 
 ## Podział klas i warstw
 
